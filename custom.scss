@@ -70,13 +70,13 @@ body::before {
 .hero-img {
   display: block !important;
   width: 100% !important;
-  height: 440px !important;
+  height: 500px !important;
   object-fit: cover !important;
-  object-position: center center !important;
+  object-position: center top !important;
   border-radius: 0 !important;
   box-shadow: none !important;
   margin: 0 !important;
-  filter: brightness(0.82) !important;
+  filter: brightness(0.52) !important;
 }
 /* Wheat stalk watermark — right side */
 .hero::after {
@@ -95,9 +95,9 @@ body::before {
 
 .hero h1 {
   position: absolute;
-  top: 44px;
+  top: 52px;
   left: 2rem;
-  right: 35%;
+  right: 36%;
   font-family: "Playfair Display", Georgia, serif;
   font-size: 2.6rem;
   font-weight: 800;
@@ -105,28 +105,28 @@ body::before {
   margin-bottom: 0;
   border: none;
   line-height: 1.2;
-  text-shadow: 0 2px 18px rgba(0,0,0,0.8);
+  text-shadow: 0 2px 18px rgba(0,0,0,0.9);
   z-index: 3;
 }
 .hero .subtitle {
   position: absolute;
-  top: 196px;
+  top: 218px;
   left: 2rem;
-  right: 35%;
+  right: 36%;
   z-index: 3;
 }
 .hero .subtitle p {
   font-size: 0.97rem !important;
-  color: rgba(255,255,255,0.88) !important;
+  color: rgba(255,255,255,0.90) !important;
   line-height: 1.72;
   font-weight: 400;
   margin: 0;
-  text-shadow: 0 1px 10px rgba(0,0,0,0.65);
+  text-shadow: 0 1px 12px rgba(0,0,0,0.8);
   opacity: 1 !important;
 }
 .hero .meta {
   position: absolute;
-  top: 330px;
+  top: 380px;
   left: 2rem;
   z-index: 3;
 }
@@ -141,23 +141,24 @@ body::before {
 }
 .hero .badge-row {
   position: absolute;
-  top: 365px;
+  top: 418px;
   left: 2rem;
   right: 2rem;
   display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
+  gap: 0.45rem;
+  flex-wrap: nowrap;
   z-index: 3;
 }
 .hero .badge-item {
   background: rgba(166, 54, 3, 0.90);
   border: none;
   border-radius: 3px;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.74rem;
+  padding: 0.22rem 0.6rem;
+  font-size: 0.70rem;
   font-weight: 700;
   color: #F5E6D3;
   letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 /* ── STAT ROW ──────────────────────────────────────────────────────────── */
@@ -373,9 +374,9 @@ hr {
 }
 
 @media (max-width: 768px) {
-  .hero h1 { font-size: 1.9rem; top: 32px; }
-  .hero .subtitle { top: 160px; right: 1rem; }
-  .hero .meta { top: 290px; }
-  .hero .badge-row { top: 325px; }
+  .hero h1 { font-size: 1.8rem; top: 40px; }
+  .hero .subtitle { top: 170px; right: 1rem; }
+  .hero .meta { top: 320px; }
+  .hero .badge-row { top: 356px; flex-wrap: wrap; }
   .stat-row { gap: 2rem; }
 }
