@@ -15,7 +15,7 @@ The question worth asking in 2026 is not whether the crisis exists. It does. The
 
 The first thing the data shows clearly is that this is not a Maharashtra problem. It is a Vidarbha problem.
 
-Vidarbha is the eastern chunk of Maharashtra, six districts at its core: Yavatmal, Amravati, Akola, Washim, Buldhana, Wardha. These six districts, out of Maharashtra's 36, account for roughly half the state's farmer suicide total in most years. Yavatmal alone, a district of around 2.7 million people, regularly records more farmer suicides than entire states.
+Vidarbha is the eastern chunk of Maharashtra, eleven districts in total. Six of them form the core of the crisis: Yavatmal, Amravati, Akola, Washim, Buldhana, Wardha. Together, Vidarbha's eleven districts account for roughly half the state's farmer suicide total in most years. Yavatmal alone, a district of around 2.7 million people, regularly records more farmer suicides than most Indian states.
 
 The rest of Maharashtra does not look like Vidarbha. Pune, Nashik, Kolhapur, the coastal Konkan belt: elevated compared to urban districts, but not dramatically different from other agricultural states. It is Vidarbha and, to a lesser extent, Marathwada that pull Maharashtra's totals to the levels that make it an outlier nationally.
 
@@ -39,7 +39,7 @@ The pattern is consistent across both interventions: a loan waiver reduces suici
 
 ## What the farmers say, and what the data shows
 
-The NCRB records a reason for each suicide. Debt and financial distress is consistently the largest category, accounting for roughly 37 to 40 percent of farmer suicides in Maharashtra in recent years. Crop failure is second at around 17 to 19 percent and has been rising. Family problems are third.
+The NCRB records a reason for each suicide. Debt and financial distress is consistently the largest category, accounting for roughly 37 to 40 percent of farmer suicides in Maharashtra in recent years. Crop failure is second at around 15 to 19 percent and has been rising. Family problems are third.
 
 These categories are imperfect. A farmer who kills himself after a crop failure and a debt spiral will often be recorded under whichever category the local official finds most legible. Debt and crop failure are frequently the same event experienced from two different angles. The distinction matters less than the direction: the data consistently points toward economic distress, not mental illness, domestic conflict, or other factors that dominate suicide statistics in urban India.
 

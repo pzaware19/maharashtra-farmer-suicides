@@ -44,7 +44,7 @@ Every dot in the image above is ten farmer suicides. The tallest columns are the
 ::: {.abstract-box}
 **Four findings from the data**
 
-1. **This is not a Maharashtra crisis. It is a Vidarbha crisis.** Six districts (Yavatmal, Amravati, Akola, Washim, Buldhana, Wardha) account for roughly half the state's total in most years. Yavatmal alone regularly records more farmer suicides than entire states.
+1. **This is not a Maharashtra crisis. It is a Vidarbha crisis.** Vidarbha's eleven eastern districts account for roughly half the state's total in most years. Six of them — Yavatmal, Amravati, Akola, Washim, Buldhana, Wardha — drive the bulk of those numbers. Yavatmal alone regularly records more farmer suicides than most Indian states.
 
 2. **Cotton monoculture is the structural driver.** Vidarbha grows cotton almost exclusively. It is a cash crop that requires borrowed capital every season with no food-crop fallback. When monsoons fail or prices drop, the farmer who borrowed has no hedge.
 
@@ -59,7 +59,7 @@ Every dot in the image above is ten farmer suicides. The tallest columns are the
 <div class="stat-row">
   <div class="stat"><div class="stat-num">66,000</div><div class="stat-label">farmer suicides<br>2001–2022</div></div>
   <div class="stat"><div class="stat-num">4,453</div><div class="stat-label">peak year<br>(2006)</div></div>
-  <div class="stat"><div class="stat-num">~50%</div><div class="stat-label">from Vidarbha<br>(6 districts)</div></div>
+  <div class="stat"><div class="stat-num">~50%</div><div class="stat-label">from Vidarbha<br>(11 districts)</div></div>
   <div class="stat"><div class="stat-num">40%</div><div class="stat-label">due to debt /<br>financial distress</div></div>
 </div>
 ```
@@ -85,7 +85,7 @@ The map below shows average annual farmer suicides by district across 2001 to 20
 
 ![Average annual farmer suicides per district, Maharashtra, 2001–2022. The Vidarbha belt in the east dominates. Yavatmal is consistently the highest single district in the country. Source: NCRB ADSI.](output/figures/fig_map_district.png){width=100%}
 
-Look at that map for a moment. Six Vidarbha districts run dark red: Yavatmal, Amravati, Akola, Washim, Buldhana, Wardha. They account for roughly half the state's total every year. Yavatmal has averaged over 450 farmer suicides annually for two decades straight.
+Look at that map for a moment. Vidarbha's eleven eastern districts run dark red, accounting for roughly half the state's total every year. Six of them form the core of the crisis: Yavatmal, Amravati, Akola, Washim, Buldhana, Wardha. Yavatmal has averaged over 500 farmer suicides annually for two decades.
 
 The rest of Maharashtra does not look like this. Pune, Nashik, Kolhapur, the Konkan coast: suicide rates are elevated compared to urban districts, but not out of line with other agricultural states. Vidarbha, and to a lesser degree Marathwada, pull Maharashtra's totals to where they make it a national outlier.
 
@@ -107,7 +107,7 @@ Bt cotton, which came into commercial use in India in 2002, made the gamble bigg
 
 ![Farmer suicides in Maharashtra, 2001–2022, with key policy events marked. Maharashtra consistently accounts for 20–35% of India's total farmer suicides each year. Source: NCRB ADSI.](output/figures/fig_timeseries.png){width=100%}
 
-The numbers peaked in **2006 at 4,453**. That year, P. Sainath's reporting in *The Hindu* put Vidarbha on the national front page. Prime Minister Manmohan Singh came to visit. A Rs 3,750 crore relief package followed, with Rs 1,075 crore earmarked for Vidarbha specifically. In 2008, the UPA government announced a national farm loan waiver: Rs 71,000 crore.
+The numbers peaked in **2006 at 4,453**. That year, P. Sainath's reporting in *The Hindu* put Vidarbha on the national front page. Prime Minister Manmohan Singh came to visit. A Rs 3,750 crore relief package for Vidarbha's six core districts followed. In 2008, the UPA government announced a national farm loan waiver: Rs 71,000 crore.
 
 It worked, for a while. Suicides fell through 2009, came down to around 2,800, then climbed again through the early 2010s. By 2012 the number was back above 3,700.
 
