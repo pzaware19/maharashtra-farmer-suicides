@@ -189,10 +189,6 @@ This is not some cutting-edge methodological ask. It is the standard toolkit of 
 
 ---
 
-## About the Article {#article}
-
-The data journalism piece built from these figures is part of a series on Indian agrarian distress. The full text is available as a [Word document](output/reports/article_farmer_suicides.docx).
-
 ::: {.callout-note}
 **Data note.** The figures on this page use data compiled from published NCRB ADSI annual reports (2001–2022). State-level totals come directly from NCRB Table A-2. District-level figures come from published ADSI district tables, cross-checked against Mishra (2006), Patel et al. (2012, *Lancet*), and Merriott (2016). Cause data are from Table A-2.4 for 2015, 2019, and 2022. The compiled dataset and R code are available on request.
 :::
