@@ -1,4 +1,4 @@
-# The Cotton Belt and the Body Count: Farmer Suicides in Maharashtra, Two Decades On
+# Eight Per Day: Farmer Suicides in Maharashtra, Two Decades On
 
 **By Piyush Zaware**
 *Researcher, Global Poverty Research Laboratory, Northwestern Kellogg School of Management*

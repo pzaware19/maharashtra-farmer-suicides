@@ -8,7 +8,7 @@ format:
 ::: {.hero}
 ![](output/figures/fig_hero.png){.hero-img}
 
-# The Cotton Belt and the Body Count
+# Eight Per Day
 
 ::: {.subtitle}
 Between 2001 and 2022, 66,000 farmers killed themselves in Maharashtra. Eight per day, every day, for two decades. This is what the data shows: where, when, why, and what the evidence says about whether anything has worked.

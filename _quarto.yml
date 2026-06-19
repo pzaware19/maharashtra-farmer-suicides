@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "66,000 Farmers"
+  title: "Eight Per Day"
   navbar:
     left:
       - text: "The Geography"
