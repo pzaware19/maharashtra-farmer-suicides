@@ -1,4 +1,4 @@
-# Eight Per Day: Farmer Suicides in Maharashtra, Two Decades On
+# When the Cotton Fails: Farmer Suicides in Maharashtra, Two Decades On
 
 **By Piyush Zaware**
 *Researcher, Global Poverty Research Laboratory, Northwestern Kellogg School of Management*
