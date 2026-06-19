@@ -1,0 +1,37 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "66,000 Farmers"
+  navbar:
+    left:
+      - text: "The Geography"
+        href: index.html#geography
+      - text: "The Timeline"
+        href: index.html#timeline
+      - text: "The Causes"
+        href: index.html#causes
+      - text: "Policy Gap"
+        href: index.html#policy
+    right:
+      - text: "Article"
+        href: index.html#article
+      - text: "Data"
+        href: index.html#data
+  page-footer:
+    center: "Piyush Zaware · Global Poverty Research Laboratory, Northwestern Kellogg / University of Chicago · Data: NCRB ADSI 2001–2022"
+
+format:
+  html:
+    theme:
+      light: [flatly, custom.scss]
+    toc: true
+    toc-location: right
+    toc-title: "Contents"
+    toc-depth: 2
+    smooth-scroll: true
+    fig-align: center
+    fig-cap-location: bottom
+    number-sections: false
+    link-external-newwindow: true
