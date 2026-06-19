@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "When the Cotton Fails"
+  title: "Maharashtra's Farmer Suicide Crisis"
   navbar:
     left:
       - text: "The Geography"
