@@ -189,6 +189,50 @@ This is not some cutting-edge methodological ask. It is the standard toolkit of 
 
 ---
 
+## Gender {#gender}
+
+### Who is dying
+
+![Male and female farmer suicides in Maharashtra, 2001–2022. Male farmers account for around 90% of the total in every year. Female farmer suicides track the same trend but are smaller in absolute numbers. Source: NCRB ADSI Table A-2.](output/figures/fig_gender.png){width=100%}
+
+Male farmers account for roughly 90 percent of all recorded farmer suicides in Maharashtra across the entire period. That proportion has barely changed in twenty years. Female farmer suicides are smaller in absolute numbers but follow the same pattern — rising toward the 2006 peak, falling after the 2008 waiver, climbing again, falling after 2017. They are not a statistical footnote; they reflect the same structural pressures on farm households.
+
+The male concentration also reflects something about who holds formal title to land and therefore who holds formal debt. Kisan credit cards, crop loans from nationalised banks, and informal moneylender loans in Vidarbha are predominantly in the male head-of-household's name. When the debt cannot be repaid, it is most often that person who takes the decision.
+
+---
+
+## Maharashtra in National Context {#india}
+
+### Still the highest, but the gap is narrowing
+
+![Farmer suicides in Maharashtra, Karnataka, Andhra Pradesh and Telangana (combined), and Madhya Pradesh, 2001–2022. AP and Telangana are shown as a combined figure for continuity across the 2014 bifurcation. Source: NCRB ADSI Table A-2.](output/figures/fig_india_comparison.png){width=100%}
+
+Maharashtra has led India's farmer suicide count for most of the past two decades. But the national picture has shifted. Karnataka ran a close second through the early 2010s and spiked sharply in 2016 during a severe drought year. Andhra Pradesh and Telangana combined have fallen steadily since the mid-2000s. Madhya Pradesh dropped sharply after 2017, likely reflecting a combination of loan waiver effects and definitional changes in NCRB reporting.
+
+Maharashtra's absolute numbers have also fallen since the 2006 peak, but more slowly than other states. Its share of India's total farmer suicides has risen as a result. In 2006, Maharashtra accounted for roughly 26 percent of India's farmer suicide total. By the early 2020s, that share was approaching 30 percent.
+
+::: {.callout-note}
+**A note on AP bifurcation.** Andhra Pradesh was divided into AP and Telangana in June 2014. NCRB reported them separately from 2014 onward. The "AP + Telangana" line above combines both figures post-2014 so the trend is comparable across the full period. A large drop visible in 2013 in the pre-bifurcation AP line reflects a reclassification in NCRB's counting methodology, not an actual fall in suicides.
+:::
+
+---
+
+## Rainfall and Suicides {#rainfall}
+
+### The monsoon connection — real but incomplete
+
+![Vidarbha monsoon rainfall anomaly (% from long-period average of 926mm) vs. Maharashtra farmer suicides, 2001–2022. Drought years (below -19%) are shown in dark red. The dashed line is the OLS fit. Source: NCRB ADSI; IMD Vidarbha meteorological sub-division.](output/figures/fig_rainfall.png){width=100%}
+
+Below-normal rainfall is associated with higher farmer suicides, but the relationship is noisy and the correlation is modest. Two years explain much of the scatter.
+
+**2006** is the biggest outlier: suicides hit their 22-year peak in a near-normal monsoon year. Bt cotton had just been widely adopted, input costs were up, and credit access was tight. The cause was structural, not climatic.
+
+**2009** is the other outlier in the other direction: a 20-percent rainfall deficit that would normally predict a spike, but suicides fell sharply because the 2008 loan waiver had just cleared outstanding debt across the region.
+
+What the rainfall scatter shows is that monsoon variability is a trigger, not the underlying cause. A bad monsoon accelerates the debt crisis for farmers already operating near the edge. A good monsoon delays it. The structural condition — borrowing at the start of every season against a single cash crop with no fallback — is what makes Vidarbha farmers permanently exposed to that trigger.
+
+---
+
 ::: {.callout-note}
 **Data note.** The figures on this page use data compiled from published NCRB ADSI annual reports (2001–2022). State-level totals come directly from NCRB Table A-2. District-level figures come from published ADSI district tables, cross-checked against Mishra (2006), Patel et al. (2012, *Lancet*), and Merriott (2016). Cause data are from Table A-2.4 for 2015, 2019, and 2022. The compiled dataset and R code are available on request.
 :::
