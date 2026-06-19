@@ -11,7 +11,7 @@ format:
 # The Cotton Belt and the Body Count
 
 ::: {.subtitle}
-Between 2001 and 2022, 66,000 farmers killed themselves in Maharashtra. Eight per day, every day, for two decades. This is what the data shows — where, when, why, and what the evidence says about whether anything has worked.
+Between 2001 and 2022, 66,000 farmers killed themselves in Maharashtra. Eight per day, every day, for two decades. This is what the data shows: where, when, why, and what the evidence says about whether anything has worked.
 :::
 
 ::: {.meta}
@@ -38,19 +38,19 @@ Choropleth · Time Series · Cause Analysis
 :::
 
 ::: {.lead-para}
-Every dot in the hero image above is ten farmer suicides. The tallest columns correspond to the six Vidarbha districts at their peak in 2006, when Maharashtra recorded 4,453 farmer deaths in a single year. This project visualises the National Crime Records Bureau's district-level data on farmer suicides across Maharashtra from 2001 to 2022 and reads the patterns against the policy interventions of those two decades.
+Every dot in the image above is ten farmer suicides. The tallest columns are the six Vidarbha districts at their 2006 peak, when Maharashtra recorded 4,453 farmer deaths in a single year. This project maps the National Crime Records Bureau's district-level data from 2001 to 2022 and reads the numbers against the policy responses of those two decades.
 :::
 
 ::: {.abstract-box}
 **Four findings from the data**
 
-1. **This is not a Maharashtra crisis. It is a Vidarbha crisis.** Six districts — Yavatmal, Amravati, Akola, Washim, Buldhana, Wardha — account for roughly half the state's total in most years. Yavatmal alone regularly records more farmer suicides than entire states.
+1. **This is not a Maharashtra crisis. It is a Vidarbha crisis.** Six districts (Yavatmal, Amravati, Akola, Washim, Buldhana, Wardha) account for roughly half the state's total in most years. Yavatmal alone regularly records more farmer suicides than entire states.
 
 2. **Cotton monoculture is the structural driver.** Vidarbha grows cotton almost exclusively. It is a cash crop that requires borrowed capital every season with no food-crop fallback. When monsoons fail or prices drop, the farmer who borrowed has no hedge.
 
-3. **Loan waivers work — for two to three years.** The 2008 UPA waiver and the 2017 Maharashtra waiver both produced measurable drops in suicide counts. Both were followed by recovery to pre-waiver levels. The structural conditions that generate debt are not removed by debt relief.
+3. **Loan waivers work, but only for two to three years.** The 2008 UPA waiver and the 2017 Maharashtra waiver both cut suicide counts. Both were followed by recovery to pre-waiver levels. Clearing debt does not change the conditions that create it.
 
-4. **The evidence base for what works is surprisingly thin.** India has not published a credible difference-in-differences estimate of whether crop insurance (PMFBY), MSP procurement, or irrigation investment reduces suicides. The data to answer these questions exists. The analysis has not been done.
+4. **The evidence base for what works is surprisingly thin.** India has not published a credible estimate of whether crop insurance (PMFBY), MSP procurement, or irrigation investment actually reduces suicides. The data to answer these questions exists. The analysis has not been done.
 :::
 
 ## The Data {#data}
@@ -64,14 +64,14 @@ Every dot in the hero image above is ten farmer suicides. The tallest columns co
 </div>
 ```
 
-The primary data source is the NCRB's **Accidental Deaths and Suicides in India** (ADSI) series, published annually. Table A-2 gives state-level counts of farmer and cultivator suicides by gender; Table A-2.2 gives district-level breakdowns; Table A-2.4 records the stated cause. The ADSI data has well-documented limitations: the definition of "farmer" is inconsistent across years, families have incentives to misclassify suicides to avoid social stigma, and local officials vary in how they record cause-of-death. Researchers generally believe the figures undercount rather than overcount. All analyses here use the published figures as a lower bound.
+The primary source is the NCRB's **Accidental Deaths and Suicides in India** (ADSI) series, published every year. Table A-2 gives state-level farmer suicide counts by gender; Table A-2.2 gives district breakdowns; Table A-2.4 records the stated cause. The data has known limitations: the definition of "farmer" is not consistent across years, families sometimes misclassify suicides to avoid stigma, and what a local official records as the cause varies widely. Researchers who have worked with this data generally think the figures undercount rather than overcount. Everything here treats the published numbers as a floor.
 
 | Source | Years | Geographic level | Variables |
 |--------|-------|-----------------|-----------|
 | NCRB ADSI Table A-2 | 2001–2022 | State | Total, male, female |
 | NCRB ADSI Table A-2.2 | 2001–2022 | District | Total suicides |
 | NCRB ADSI Table A-2.4 | 2015, 2019, 2022 | State | Cause breakdown |
-| GADM v4.1 | — | District | Maharashtra shapefiles |
+| GADM v4.1 | n/a | District | Maharashtra shapefiles |
 
 Maharashtra shapefiles were downloaded via the `geodata` R package (`gadm(country="IND", level=2)`), which returns all 36 districts with GADM standardised boundaries.
 
@@ -81,48 +81,46 @@ Maharashtra shapefiles were downloaded via the `geodata` R package (`gadm(countr
 
 ### Where it happens
 
-The map below shows average annual farmer suicides by district across the full 2001–2022 period. Districts where data was not published by NCRB are shown in grey.
+The map below shows average annual farmer suicides by district across 2001 to 2022. Districts where NCRB did not publish data appear in grey.
 
 ![Average annual farmer suicides per district, Maharashtra, 2001–2022. The Vidarbha belt in the east dominates. Yavatmal is consistently the highest single district in the country. Source: NCRB ADSI.](output/figures/fig_map_district.png){width=100%}
 
-The geographic concentration is stark. Six Vidarbha districts — Yavatmal, Amravati, Akola, Washim, Buldhana, Wardha — anchor the crisis. Yavatmal alone has averaged over 450 farmer suicides annually for two decades.
+Look at that map for a moment. Six Vidarbha districts run dark red: Yavatmal, Amravati, Akola, Washim, Buldhana, Wardha. They account for roughly half the state's total every year. Yavatmal has averaged over 450 farmer suicides annually for two decades straight.
 
-The rest of Maharashtra does not look like Vidarbha. Pune, Nashik, Kolhapur, the coastal Konkan belt: suicide rates are elevated compared to urban districts, but not dramatically different from other agricultural states. It is Vidarbha and, to a lesser extent, Marathwada that pull Maharashtra to the levels that make it a national outlier.
+The rest of Maharashtra does not look like this. Pune, Nashik, Kolhapur, the Konkan coast: suicide rates are elevated compared to urban districts, but not out of line with other agricultural states. Vidarbha, and to a lesser degree Marathwada, pull Maharashtra's totals to where they make it a national outlier.
 
 ### Why Vidarbha?
 
-The answer is cotton. Vidarbha grows cotton almost exclusively. It is a cash crop: farmers must borrow to buy seeds, fertiliser, and pesticide at the start of each season. It is highly sensitive to rainfall and to global market prices. When a monsoon fails, or when cotton prices fall at harvest, the farmer who borrowed to plant has no fallback. There is no food crop to eat or sell. There is just the debt and the failed harvest.
+Cotton. Vidarbha grows cotton almost exclusively. Cotton is a cash crop: farmers borrow to buy seeds, fertiliser, and pesticide at the start of every season. When a monsoon underperforms, or when cotton prices fall at harvest time, the farmer who borrowed has nothing to fall back on. There is no food crop to eat or sell. There is the debt and the failed field.
 
-Bt cotton, introduced commercially in India in 2002, raised the stakes further. It required more water, more pesticide, and costlier seeds. In good monsoon years, yields improved. In bad years, Bt cotton fields failed more completely than traditional varieties — and the capital invested per acre had gone up.
+Bt cotton, which came into commercial use in India in 2002, made the gamble bigger. It needed more water, more pesticide, and costlier seed. In a good monsoon, yields went up. When the rains were inadequate, Bt cotton failed worse than the older varieties did. The potential upside increased; so did the floor risk.
 
 ::: {.callout-note}
-**Why not Marathwada?** Marathwada also has serious agrarian distress. But it grows a more diverse crop mix — soybean, sugarcane, and pulses alongside cotton. Sugarcane links farmers to cooperative sugar mills, which provide some income stability and credit access that cotton farmers lack. Marathwada has its own crisis; it is simply less extreme than Vidarbha's.
+**Why not Marathwada?** Marathwada has serious agrarian distress too, but its crop mix is more varied: soybean, sugarcane, and pulses alongside cotton. Sugarcane ties farmers to cooperative sugar mills, which provide more stable income and credit access than cotton buyers do. Marathwada's crisis is real; it is simply less concentrated than Vidarbha's.
 :::
 
 ---
 
 ## The Timeline {#timeline}
 
-### Two decades of a crisis that keeps recovering
+### Two decades of a crisis that keeps coming back
 
 ![Farmer suicides in Maharashtra, 2001–2022, with key policy events marked. Maharashtra consistently accounts for 20–35% of India's total farmer suicides each year. Source: NCRB ADSI.](output/figures/fig_timeseries.png){width=100%}
 
-The trend line tells a story of crisis, intervention, and recurrence.
+The numbers peaked in **2006 at 4,453**. That year, P. Sainath's reporting in *The Hindu* put Vidarbha on the national front page. Prime Minister Manmohan Singh came to visit. A Rs 3,750 crore relief package followed, with Rs 1,075 crore earmarked for Vidarbha specifically. In 2008, the UPA government announced a national farm loan waiver: Rs 71,000 crore.
 
-Maharashtra's farmer suicide counts peaked in **2006 at 4,453**. That year, P. Sainath's reporting in *The Hindu* brought Vidarbha to national attention. Prime Minister Manmohan Singh visited. A Rs 3,750 crore relief package followed — Rs 1,075 crore for Vidarbha specifically. In 2008, the UPA government announced a national farm loan waiver worth Rs 71,000 crore.
+It worked, for a while. Suicides fell through 2009, came down to around 2,800, then climbed again through the early 2010s. By 2012 the number was back above 3,700.
 
-It worked, briefly. Suicides fell through 2009, reached around 2,800, then climbed again through the early 2010s. By 2012, the number was back above 3,700.
-
-A second loan waiver, state-level this time, came in 2017 under Chief Minister Devendra Fadnavis: Rs 34,000 crore. Suicides fell again. In 2018, the count reached its lowest since 2001 at 2,239. Then they climbed again.
+A second waiver came in 2017, this one from the state government under Chief Minister Devendra Fadnavis: Rs 34,000 crore. Suicides dropped again. In 2018 the count hit its lowest point since 2001, at 2,239. Then they went up again.
 
 ### Vidarbha's share of the total
 
 ![Farmer suicides by region: Vidarbha (deepest red), Marathwada (orange), and the rest of Maharashtra. Vidarbha accounts for roughly half the state total in most years. Source: NCRB ADSI; regional shares estimated from published district data.](output/figures/fig_vidarbha_vs_rest.png){width=100%}
 
-The stacked area chart makes the regional concentration legible. Vidarbha contributes roughly half the state total in each year. Marathwada contributes another 18 percent. The remaining 17 districts of Maharashtra — including the prosperous western Maharashtra belt — account for less than a third of the total despite holding a larger share of the state's agricultural population.
+Vidarbha runs at roughly half the state total every year. Marathwada contributes another 18 percent. The remaining 17 districts of Maharashtra, including the more prosperous western belt, account for less than a third of the total while holding more than a third of the state's agricultural population.
 
 ::: {.callout-note}
-**The waiver pattern.** Loan waivers reduce suicides for two to three years and then the numbers recover. This is not a criticism of waivers as policy — debt relief is real relief for the farmers who receive it. But a farmer whose current debt is waived is still a farmer who will borrow again next season, because the economics of rain-fed cotton farming in Vidarbha require it. The structural conditions that generate debt are not altered by a one-time relief measure.
+**On the waiver cycle.** Loan waivers reduce suicides for two to three years, then the numbers recover. This is not a knock on waivers as a policy tool; debt relief is real and immediate for the farmers who receive it. But a farmer whose current debt is cleared still has to borrow again next planting season. The structural conditions that create the debt are not touched by a one-time intervention.
 :::
 
 ---
@@ -133,13 +131,13 @@ The stacked area chart makes the regional concentration legible. Vidarbha contri
 
 ![Causes of farmer suicides in Maharashtra, 2015, 2019, and 2022. Debt and financial distress is consistently the largest category. Crop failure has grown as a recorded cause since 2015. Source: NCRB ADSI Table A-2.4.](output/figures/fig_causes.png){width=100%}
 
-The NCRB records a stated cause for each suicide. Across all three available years, **debt and financial distress is the largest single category**, accounting for 37–40 percent of Maharashtra farmer suicides. Crop failure is second at 15–19 percent and has been growing. Family problems are third at around 12 percent.
+The NCRB records a stated cause for each suicide. Across all three years where this breakdown is available, **debt and financial distress is the largest single category**, at 37 to 40 percent. Crop failure is second, at 15 to 19 percent and rising. Family problems are third, at around 12 percent.
 
-These categories are imperfect instruments. A farmer who kills himself after a failed harvest and a debt spiral is frequently classified under whichever category the local official finds most legible. Debt and crop failure are often the same event seen from two angles: the harvest failed and the loan cannot be repaid.
+These categories are rough. A farmer who takes his life after a failed harvest and a mounting loan is often recorded under whichever cause the local official reaches for first. Debt and crop failure frequently describe the same event from two directions: the harvest failed and the money owed cannot be repaid.
 
-The direction, however, is consistent: the data points toward **economic distress**, not mental illness, domestic conflict, or other factors that dominate suicide statistics in urban India.
+What the data keeps pointing to, consistently, is **economic distress** rather than mental illness, domestic conflict, or other factors that show up most in urban suicide statistics.
 
-This matters for policy. Farmer suicides in Vidarbha are not primarily a mental health crisis. They are an agricultural economics crisis that takes its final toll in death. Expanding mental health services at the margin may help. But it does not address the condition that produces the crisis.
+That matters for what you do about it. Farmer suicides in Vidarbha are not primarily a mental health crisis. They are an economic one that ends in death. Mental health services have a role, but they do not reach the root cause.
 
 | Cause | 2015 | 2019 | 2022 |
 |-------|------|------|------|
@@ -158,51 +156,51 @@ This matters for policy. Farmer suicides in Vidarbha are not primarily a mental 
 
 ### What has been tried
 
-India has deployed three classes of intervention in Vidarbha over two decades:
+Three types of intervention have been deployed in Vidarbha over the past two decades:
 
-**Loan waivers** (2008 national, 2017 Maharashtra): Both produced measurable short-term reductions in suicide counts. Both were followed by recovery. Waivers clear the immediate debt burden but do not change the conditions that generate it.
+**Loan waivers** (2008 national, 2017 Maharashtra): Both produced short-term drops in suicide counts. Both were followed by recovery. Waivers clear the immediate debt but leave the conditions that generate it untouched.
 
-**Crop insurance** (PMFBY, launched 2016): Premium subsidies were increased and coverage expanded. Take-up in Vidarbha has been variable; claim settlement delays have been documented repeatedly by farmer organisations and state auditors. Whether PMFBY has reduced suicides in covered districts has not been rigorously estimated.
+**Crop insurance** (PMFBY, launched 2016): Premium subsidies went up and coverage expanded. Take-up in Vidarbha has been uneven, and delays in claim settlement have been flagged repeatedly by farmer groups and state auditors. Whether PMFBY has actually reduced suicides in the districts where coverage is high has never been properly estimated.
 
-**MSP procurement**: Cotton is covered under MSP but procurement by the Cotton Corporation of India at MSP in Vidarbha has been unreliable. In many years, CCI purchases were concentrated at specific centres that farmers without access to transport could not reach.
+**MSP procurement**: Cotton is covered under MSP, but the Cotton Corporation of India's actual procurement in Vidarbha has been unreliable in most years. CCI purchases tended to concentrate at procurement centres that farmers without transport access could not reach.
 
 ### What has not been done
 
 ::: {.policy-box}
 **The missing study**
 
-The government of Maharashtra holds district-year data on farmer suicides, PMFBY enrolment and claim settlement, CCI procurement volumes, loan disbursement by kisan credit cards, and rainfall from IMD. A difference-in-differences analysis across districts and years could estimate:
+The Maharashtra government holds district-year data on farmer suicides, PMFBY enrolment and claims, CCI procurement volumes, kisan credit card disbursements, and IMD rainfall. A difference-in-differences study across districts and years could tell you:
 
-- Whether PMFBY coverage reduces suicides, and by how much per percentage point of take-up
-- Whether claim settlement speed matters more than coverage itself
-- Whether CCI procurement volume in a district reduces suicides in the same year
-- Whether irrigation investment (wells, drip systems) reduces exposure to monsoon risk
+- Whether higher PMFBY coverage actually reduces suicides, and by how much
+- Whether the speed of claim settlement matters more than coverage alone
+- Whether CCI procurement volume in a district reduces suicides that year
+- Whether irrigation investment reduces exposure to monsoon risk
 
-None of these analyses has been published in peer-reviewed form or as government evaluation reports. The data exists. The methodology is well-established. **The evidence is simply not there.**
+None of these questions has been answered in a published study or a government evaluation report. The data is sitting in government databases. The method is not exotic. **The evidence simply does not exist.**
 
-Sixty-six thousand deaths over twenty-two years is enough data. It should not require more.
+Sixty-six thousand deaths over twenty-two years is enough data. It should not take more.
 :::
 
-### What rigorous evaluation would look like
+### What a proper evaluation would need
 
-The natural variation in PMFBY take-up across districts and years provides a plausible identification strategy — districts where take-up jumped in specific years (due to outreach drives, local insurance company presence, or collector-level initiatives) versus comparable districts where it did not. A two-way fixed-effects model with district and year fixed effects, instrumenting for take-up with some district-level policy variation, could identify the causal effect of insurance coverage on suicides.
+The variation in PMFBY take-up across districts and years gives a starting point for identification. Some districts saw sharp increases in coverage in specific years because of local outreach drives, insurer presence, or a particularly active collector. Comparing those districts to similar ones where take-up did not jump, while controlling for district and year fixed effects, could isolate the effect of insurance on suicides.
 
-This is not methodologically exotic. It is the standard toolkit of agricultural economics. The reason it has not been done is institutional: the data across agencies (NCRB, PMFBY portal, CCI, IMD) has not been assembled and linked. The political incentive to evaluate whether a flagship scheme actually reduces suicides is weak if the answer might be "not much."
+This is not some cutting-edge methodological ask. It is the standard toolkit of agricultural economics. The reason it has not been done is institutional: the data sits in separate systems across NCRB, the PMFBY portal, CCI, and IMD, and no one has pulled it together. There is also little political appetite to fund an evaluation whose answer might be "the scheme is not reducing suicides by much."
 
 ---
 
 ## About the Article {#article}
 
-The data journalism piece built from these figures was published as part of a series on Indian agrarian distress. The full article is available as a [Word document](output/reports/article_farmer_suicides.docx).
+The data journalism piece built from these figures is part of a series on Indian agrarian distress. The full text is available as a [Word document](output/reports/article_farmer_suicides.docx).
 
 ::: {.callout-note}
-**Data transparency note.** The figures above use data compiled from published NCRB ADSI annual reports (2001–2022). State-level totals are taken directly from NCRB Table A-2. District-level figures are drawn from published ADSI district tables and cross-checked against academic sources including Mishra (2006), Patel et al. (2012 *Lancet*), and Merriott (2016). Causes data are from Table A-2.4 for the years 2015, 2019, and 2022, where the cause-breakdown table was published. The compiled dataset and R analysis code are available on request.
+**Data note.** The figures on this page use data compiled from published NCRB ADSI annual reports (2001–2022). State-level totals come directly from NCRB Table A-2. District-level figures come from published ADSI district tables, cross-checked against Mishra (2006), Patel et al. (2012, *Lancet*), and Merriott (2016). Cause data are from Table A-2.4 for 2015, 2019, and 2022. The compiled dataset and R code are available on request.
 :::
 
 ---
 
 ## About
 
-**Piyush Zaware** is a researcher at the Global Poverty Research Laboratory, Northwestern Kellogg School of Management, and a doctoral student in economics at the University of Chicago. His research focuses on agricultural economics, public finance, and state capacity in India.
+**Piyush Zaware** is a researcher at the Global Poverty Research Laboratory, Northwestern Kellogg School of Management, and a doctoral student in economics at the University of Chicago. He works on agricultural economics, public finance, and state capacity in India.
 
 [piyushz@uchicago.edu](mailto:piyushz@uchicago.edu)
