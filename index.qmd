@@ -44,7 +44,7 @@ Every dot in the image above is ten farmer suicides. The tallest columns are the
 ::: {.abstract-box}
 **Four findings from the data**
 
-1. **This is not a Maharashtra crisis. It is a Vidarbha crisis.** Vidarbha's eleven eastern districts account for roughly half the state's total in most years. Six of them — Yavatmal, Amravati, Akola, Washim, Buldhana, Wardha — drive the bulk of those numbers. Yavatmal alone regularly records more farmer suicides than most Indian states.
+1. **This is not a Maharashtra crisis. It is a Vidarbha crisis.** Vidarbha's eleven eastern districts account for roughly half the state's total in most years. Six of them (Yavatmal, Amravati, Akola, Washim, Buldhana, Wardha) drive the bulk of those numbers. Yavatmal alone regularly records more farmer suicides than most Indian states.
 
 2. **Cotton monoculture is the structural driver.** Vidarbha grows cotton almost exclusively. It is a cash crop that requires borrowed capital every season with no food-crop fallback. When monsoons fail or prices drop, the farmer who borrowed has no hedge.
 
@@ -195,7 +195,7 @@ This is not some cutting-edge methodological ask. It is the standard toolkit of 
 
 ![Male and female farmer suicides in Maharashtra, 2001–2022. Male farmers account for around 90% of the total in every year. Female farmer suicides track the same trend but are smaller in absolute numbers. Source: NCRB ADSI Table A-2.](output/figures/fig_gender.png){width=100%}
 
-Male farmers account for roughly 90 percent of all recorded farmer suicides in Maharashtra across the entire period. That proportion has barely changed in twenty years. Female farmer suicides are smaller in absolute numbers but follow the same pattern — rising toward the 2006 peak, falling after the 2008 waiver, climbing again, falling after 2017. They are not a statistical footnote; they reflect the same structural pressures on farm households.
+Male farmers account for roughly 90 percent of all recorded farmer suicides in Maharashtra across the entire period. That proportion has barely changed in twenty years. Female farmer suicides are smaller in absolute numbers but follow the same pattern: rising toward the 2006 peak, falling after the 2008 waiver, climbing again, falling after 2017. They are not a statistical footnote; they reflect the same structural pressures on farm households.
 
 The male concentration also reflects something about who holds formal title to land and therefore who holds formal debt. Kisan credit cards, crop loans from nationalised banks, and informal moneylender loans in Vidarbha are predominantly in the male head-of-household's name. When the debt cannot be repaid, it is most often that person who takes the decision.
 
@@ -219,7 +219,7 @@ Maharashtra's absolute numbers have also fallen since the 2006 peak, but more sl
 
 ## Rainfall and Suicides {#rainfall}
 
-### The monsoon connection — real but incomplete
+### The monsoon connection: real but incomplete
 
 ![Vidarbha monsoon rainfall anomaly (% from long-period average of 926mm) vs. Maharashtra farmer suicides, 2001–2022. Drought years (below -19%) are shown in dark red. The dashed line is the OLS fit. Source: NCRB ADSI; IMD Vidarbha meteorological sub-division.](output/figures/fig_rainfall.png){width=100%}
 
@@ -229,7 +229,7 @@ Below-normal rainfall is associated with higher farmer suicides, but the relatio
 
 **2009** is the other outlier in the other direction: a 20-percent rainfall deficit that would normally predict a spike, but suicides fell sharply because the 2008 loan waiver had just cleared outstanding debt across the region.
 
-What the rainfall scatter shows is that monsoon variability is a trigger, not the underlying cause. A bad monsoon accelerates the debt crisis for farmers already operating near the edge. A good monsoon delays it. The structural condition — borrowing at the start of every season against a single cash crop with no fallback — is what makes Vidarbha farmers permanently exposed to that trigger.
+What the rainfall scatter shows is that monsoon variability is a trigger, not the underlying cause. A bad monsoon accelerates the debt crisis for farmers already operating near the edge. A good monsoon delays it. The structural condition is borrowing at the start of every season against a single cash crop with no fallback. That is what makes Vidarbha farmers permanently exposed to that trigger.
 
 ---
 
