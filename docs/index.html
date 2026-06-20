@@ -121,6 +121,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Rainfall</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./index.html#regression"> 
+<span class="menu-text">Regression</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./index.html#policy"> 
 <span class="menu-text">Policy Gap</span></a>
   </li>  
@@ -150,6 +154,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#geography" id="toc-geography" class="nav-link" data-scroll-target="#geography">The Geography</a></li>
   <li><a href="#timeline" id="toc-timeline" class="nav-link" data-scroll-target="#timeline">The Timeline</a></li>
   <li><a href="#causes" id="toc-causes" class="nav-link" data-scroll-target="#causes">The Causes</a></li>
+  <li><a href="#regression" id="toc-regression" class="nav-link" data-scroll-target="#regression">Regression: Separating the Drivers</a></li>
   <li><a href="#policy" id="toc-policy" class="nav-link" data-scroll-target="#policy">The Policy Gap</a></li>
   <li><a href="#gender" id="toc-gender" class="nav-link" data-scroll-target="#gender">Gender</a></li>
   <li><a href="#india" id="toc-india" class="nav-link" data-scroll-target="#india">Maharashtra in National Context</a></li>
@@ -390,6 +395,45 @@ Note
 </tbody>
 </table>
 <p><em>Source: NCRB ADSI Table A-2.4. Maharashtra figures.</em></p>
+<hr>
+</section>
+</section>
+<section id="regression" class="level2">
+<h2 class="anchored" data-anchor-id="regression">Regression: Separating the Drivers</h2>
+<section id="three-variables-84-percent-of-the-variance" class="level3">
+<h3 class="anchored" data-anchor-id="three-variables-84-percent-of-the-variance">Three variables, 84 percent of the variance</h3>
+<p>A state-level OLS regression puts numbers on the three drivers that appear throughout this analysis: cotton prices, monsoon rainfall, and loan waivers. The outcome is log farmer suicides in Maharashtra, 2001 to 2022 (n = 22). Three regressors jointly explain 84 percent of the year-to-year variation.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="output/figures/fig_regression_fit.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Actual versus fitted Maharashtra farmer suicides, 2001–2022. The model uses cotton price (COTLOOK A, standardised), Vidarbha rainfall anomaly, and two waiver window dummies. R² = 0.84. The model misses the 2006 peak: that year was a structural credit crisis, not a price-crash or drought year. Source: NCRB ADSI; Cotlook Ltd; IMD.</figcaption>
+</figure>
+</div>
+<p>The model tracks the broad pattern well: the 2006 peak, the post-waiver fall, the 2012-13 rebound, the 2017-18 drop. Where it misses, the miss is informative. The 2006 peak sits above the model’s prediction because cotton prices in that year were not unusually low (61 cents, mid-range) and Vidarbha had a near-normal monsoon. The model correctly learns that 2006 was exceptional and cannot fully explain it from prices and rainfall alone. That year was driven by the adoption of expensive Bt cotton on borrowed capital: a structural shock, not a climatic or price one.</p>
+</section>
+<section id="what-the-coefficients-show" class="level3">
+<h3 class="anchored" data-anchor-id="what-the-coefficients-show">What the coefficients show</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="output/figures/fig_regression_coefs.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Regression coefficients with 95% confidence intervals (HC3 robust standard errors). Log OLS, n = 22. Positive coefficient = associated with more suicides; negative = fewer. Waiver effects are the most precisely estimated.</figcaption>
+</figure>
+</div>
+<p>The waivers are the clearest signal. The 2008 national waiver is associated with roughly 18 percent fewer suicides in the three years that followed. The 2017 Maharashtra waiver is associated with a 15 percent reduction. Both coefficients are in the expected direction and the 2017 estimate is statistically significant at the 5 percent level.</p>
+<p>The cotton price and rainfall coefficients are statistically noisy at n = 22. The reason is not that the relationships are spurious: the scatter plots earlier in this piece show them clearly. The problem is multicollinearity. The 2010-11 cotton boom and the 2008 waiver window overlap almost exactly in time. The model cannot cleanly attribute the suicide decline in those years to prices versus debt relief. Separating them requires variation across districts and crops, not just variation over time.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>What this regression cannot do.</strong> State-level OLS with 22 observations cannot establish causality. Cotton price is a national variable that changes every year; with a year trend in the model, its effect is only identified through deviations from trend that happen to co-move with suicide counts. A proper causal design requires district-year variation: for instance, comparing Vidarbha districts (cotton-exposed) to Marathwada districts (soybean-exposed) in years when cotton and soybean prices moved in opposite directions. That design requires full district-year data on suicides, crop area, and prices, and it is the analysis described in the Policy Gap section below.</p>
+</div>
+</div>
 <hr>
 </section>
 </section>

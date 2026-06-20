@@ -20,6 +20,8 @@ website:
         href: index.html#cotton
       - text: "Rainfall"
         href: index.html#rainfall
+      - text: "Regression"
+        href: index.html#regression
       - text: "Policy Gap"
         href: index.html#policy
     right:
