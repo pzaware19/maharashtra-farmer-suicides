@@ -203,17 +203,39 @@ The male concentration also reflects something about who holds formal title to l
 
 ## Maharashtra in National Context {#india}
 
-### Still the highest, but the gap is narrowing
+### Still the highest, but absolute counts hide the real story
 
 ![Farmer suicides in Maharashtra, Karnataka, Andhra Pradesh and Telangana (combined), and Madhya Pradesh, 2001–2022. AP and Telangana are shown as a combined figure for continuity across the 2014 bifurcation. Source: NCRB ADSI Table A-2.](output/figures/fig_india_comparison.png){width=100%}
 
-Maharashtra has led India's farmer suicide count for most of the past two decades. But the national picture has shifted. Karnataka ran a close second through the early 2010s and spiked sharply in 2016 during a severe drought year. Andhra Pradesh and Telangana combined have fallen steadily since the mid-2000s. Madhya Pradesh dropped sharply after 2017, likely reflecting a combination of loan waiver effects and definitional changes in NCRB reporting.
+Maharashtra has led India's farmer suicide count for most of the past two decades. Karnataka ran a close second through the early 2010s and spiked sharply in 2016 during a severe drought. AP and Telangana combined have fallen steadily. Madhya Pradesh dropped sharply after 2017, partly from loan waiver effects and partly from a narrowing of NCRB's counting methodology.
 
-Maharashtra's absolute numbers have also fallen since the 2006 peak, but more slowly than other states. Its share of India's total farmer suicides has risen as a result. In 2006, Maharashtra accounted for roughly 26 percent of India's farmer suicide total. By the early 2020s, that share was approaching 30 percent.
+But absolute counts are a misleading basis for comparison. Maharashtra has more farmers than Karnataka. The fairer comparison is suicides per 100,000 cultivators.
+
+### Per 100,000 farmers: the ranking holds, but barely
+
+![Farmer suicides per 100,000 cultivators, 2001–2022. Agricultural population from Census 2001 and 2011, interpolated for intermediate years. Source: NCRB ADSI; Census of India.](output/figures/fig_india_percapita.png){width=100%}
+
+Maharashtra's lead narrows on a per-capita basis but does not disappear. The more striking finding is Karnataka: its per-capita rate has matched or exceeded Maharashtra's in several years, including the 2016 drought spike. On absolute count, Karnataka looks like a distant second. On a per-farmer basis, it is not.
+
+Madhya Pradesh, significant in absolute terms, almost vanishes per-capita. MP has a large agricultural population relative to its suicide count. The crisis is real there but structurally different from Vidarbha's cotton-debt dynamic.
 
 ::: {.callout-note}
-**A note on AP bifurcation.** Andhra Pradesh was divided into AP and Telangana in June 2014. NCRB reported them separately from 2014 onward. The "AP + Telangana" line above combines both figures post-2014 so the trend is comparable across the full period. A large drop visible in 2013 in the pre-bifurcation AP line reflects a reclassification in NCRB's counting methodology, not an actual fall in suicides.
+**A note on AP bifurcation.** Andhra Pradesh was divided into AP and Telangana in June 2014. The "AP + Telangana" line combines both figures post-2014 for continuity. The drop visible in 2013 reflects a reclassification in NCRB's counting methodology, not an actual fall in suicides. Agricultural population for AP + Telangana uses the combined Census 2011 cultivator count for both states.
 :::
+
+---
+
+## Cotton Prices and Suicides {#cotton}
+
+### When the price collapses, the deaths follow
+
+![Global cotton prices (COTLOOK A index, cents/lb) versus Maharashtra farmer suicides, 2001--2022. Higher prices are associated with fewer suicides; the 2012 price collapse was followed by a rebound in deaths. Source: NCRB ADSI; Cotlook Ltd.](output/figures/fig_cotton_price.png){width=100%}
+
+The cotton price signal is inverse and imperfect: when global prices rise, suicides tend to fall; when prices crash, deaths follow. The clearest episode is 2010 to 2012. Global cotton prices nearly tripled during the 2010-11 season as a supply shock from Pakistan flooding tightened world markets. Maharashtra's suicide count fell in both years. Then the boom ended. Prices collapsed by nearly half in 2012. By 2013, suicides had climbed back above 3,700.
+
+This is not a clean relationship. The correlation is real but modest: other factors cut across it. The 2008 loan waiver pulled suicides down even as prices were middling. The 2006 peak happened with prices in the 60 cents range, not a crash year. Cotton prices are one input into a farmer's calculation about whether the debt can be repaid; they are not the only input.
+
+What the price chart does show is the exposure embedded in cotton monoculture. Vidarbha farmers have no diversified crop portfolio, so they absorb the full volatility of a single global commodity price. A farmer growing soybean or dal alongside cotton has some buffer. A Vidarbha farmer with nothing but cotton is fully exposed to whatever Cotlook A prints in October when the harvest comes in.
 
 ---
 
