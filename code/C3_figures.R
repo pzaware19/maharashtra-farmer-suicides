@@ -14,6 +14,7 @@ suppressPackageStartupMessages({
   library(tidyverse)
   library(scales)
   library(ggrepel)
+  library(glue)
 })
 
 theme_print <- theme_minimal(base_size = 12) +
@@ -31,6 +32,8 @@ mh_state  <- read_csv(file.path(INPDIR, "ncrb_mh_state.csv"),     show_col_types
 india     <- read_csv(file.path(INPDIR, "ncrb_india_states.csv"), show_col_types = FALSE)
 cotton    <- read_csv(file.path(INPDIR, "cotton_prices.csv"),      show_col_types = FALSE)
 agri_pop  <- read_csv(file.path(INPDIR, "agri_population.csv"),    show_col_types = FALSE)
+soybean   <- read_csv(file.path(INPDIR, "soybean_prices.csv"),     show_col_types = FALSE)
+onion     <- read_csv(file.path(INPDIR, "onion_prices.csv"),       show_col_types = FALSE)
 
 # ── FIGURE 8: Cotton price vs suicides ────────────────────────────────────────
 #{
@@ -163,6 +166,91 @@ percap_plot <- ggplot(india_pc, aes(x = year, y = rate_per_100k, colour = state)
 ggsave(file.path(FIGDIR, "fig_india_percapita.png"), percap_plot,
        width = 11, height = 6.5, dpi = 300, bg = "white")
 message("Saved: fig_india_percapita.png")
+#}
+
+# ── FIGURE 10: Multi-crop price index ─────────────────────────────────────────
+# Index all three crops to 2001=100 so they're comparable on one chart.
+# Cotton: COTLOOK A world price (cents/lb)
+# Soybean: world price converted to Rs/quintal (via annual USD/INR average)
+# Onion: Lasalgaon mandi annual average (Rs/quintal)
+#{
+base_yr <- 2001
+
+crop_index <- bind_rows(
+  cotton %>%
+    select(year, price = cotlook_a_cents_lb) %>%
+    mutate(crop = "Cotton (COTLOOK A, world)", region = "Vidarbha"),
+  soybean %>%
+    select(year, price = world_price_rs_qtl) %>%
+    mutate(crop = "Soybean (world price, Rs/qtl)", region = "Marathwada"),
+  onion %>%
+    select(year, price = lasalgaon_rs_qtl) %>%
+    mutate(crop = "Onion (Lasalgaon mandi, Rs/qtl)", region = "Nashik belt")
+) %>%
+  group_by(crop) %>%
+  mutate(index = price / price[year == base_yr] * 100) %>%
+  ungroup()
+
+crop_colours <- c(
+  "Cotton (COTLOOK A, world)"         = "#A63603",
+  "Soybean (world price, Rs/qtl)"     = "#2D6A2D",
+  "Onion (Lasalgaon mandi, Rs/qtl)"   = "#7B4F9E"
+)
+
+# Key annotation events
+events <- tibble(
+  year  = c(2010, 2011, 2013, 2019, 2012),
+  label = c("Onion\ncrash", "Cotton\nboom peak", "Onion\nspike", "Onion\nspike", "Cotton\nbust"),
+  crop  = c("Onion (Lasalgaon mandi, Rs/qtl)",
+            "Cotton (COTLOOK A, world)",
+            "Onion (Lasalgaon mandi, Rs/qtl)",
+            "Onion (Lasalgaon mandi, Rs/qtl)",
+            "Cotton (COTLOOK A, world)"),
+  vjust = c(1.6, -0.6, -0.6, -0.6, 1.6)
+) %>%
+  left_join(crop_index %>% select(year, crop, index), by = c("year", "crop"))
+
+multi_crop_plot <- ggplot(crop_index, aes(x = year, y = index, colour = crop)) +
+  geom_hline(yintercept = 100, linetype = "dotted", colour = "#AAAAAA", linewidth = 0.5) +
+  geom_line(linewidth = 1.3) +
+  geom_point(size = 1.8) +
+  geom_text(
+    data    = events,
+    aes(label = label, vjust = vjust),
+    size    = 2.5,
+    fontface = "italic",
+    show.legend = FALSE
+  ) +
+  annotate("text", x = 2001.2, y = 107, label = "baseline (2001 = 100)",
+           size = 2.4, colour = "#AAAAAA", hjust = 0) +
+  scale_colour_manual(
+    values = crop_colours,
+    labels = c(
+      "Cotton (COTLOOK A, world)"         = "Cotton  |  Vidarbha",
+      "Soybean (world price, Rs/qtl)"     = "Soybean  |  Marathwada",
+      "Onion (Lasalgaon mandi, Rs/qtl)"   = "Onion  |  Nashik belt"
+    )
+  ) +
+  scale_x_continuous(breaks = seq(2001, 2022, 3)) +
+  scale_y_continuous(labels = function(x) paste0(round(x), "")) +
+  labs(
+    title    = "Commodity Price Volatility Across Maharashtra's Three Agricultural Zones",
+    subtitle = "All prices indexed to 2001 = 100. Onion swings far more violently than cotton or soybean.\nEach crash lands on a different region and a different set of farmers.",
+    x        = NULL,
+    y        = "Price index (2001 = 100)",
+    colour   = NULL,
+    caption  = paste0(
+      "Sources: Cotlook Ltd (COTLOOK A Index); World Bank Pink Sheet (US soybeans, Gulf);\n",
+      "NHRDF / Agmarknet (Lasalgaon mandi, Nashik). Onion 2001-2009 approximate."
+    )
+  ) +
+  theme_print +
+  theme(legend.position = "bottom",
+        legend.text = element_text(size = 9))
+
+ggsave(file.path(FIGDIR, "fig_crop_prices.png"), multi_crop_plot,
+       width = 11, height = 6.5, dpi = 300, bg = "white")
+message("Saved: fig_crop_prices.png")
 #}
 
 message("C3 complete.")

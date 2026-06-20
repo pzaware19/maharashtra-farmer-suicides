@@ -85,4 +85,79 @@ write_csv(agri_pop, file.path(INPDIR, "agri_population.csv"))
 message("Saved: agri_population.csv")
 #}
 
+# ── SECTION 3: Soybean prices ─────────────────────────────────────────────────
+# Soybean is the dominant kharif crop in Marathwada and parts of Vidarbha.
+# MSP: CACP annual kharif price support for yellow soybean (Rs/quintal).
+# World price: World Bank Pink Sheet, US soybeans (Gulf, $/mt), annual average.
+# Exchange rate (approximate annual average RBI) used for Rs/mt conversion.
+#{
+soybean <- tribble(
+  ~year, ~msp_rs_qtl, ~world_price_usd_mt, ~usd_inr,
+  2001,    850,   178,  47.2,
+  2002,    870,   196,  48.6,
+  2003,    890,   261,  46.0,
+  2004,    930,   290,  45.3,
+  2005,    970,   231,  44.1,
+  2006,   1000,   239,  45.3,
+  2007,   1050,   318,  41.3,
+  2008,   1390,   453,  43.5,
+  2009,   1390,   381,  48.4,
+  2010,   1440,   386,  45.7,
+  2011,   1650,   480,  46.7,
+  2012,   2200,   538,  53.4,
+  2013,   2500,   516,  58.6,
+  2014,   2560,   452,  61.0,
+  2015,   2600,   344,  64.2,
+  2016,   2775,   355,  67.2,
+  2017,   3050,   361,  65.1,
+  2018,   3399,   391,  68.4,
+  2019,   3710,   337,  70.4,
+  2020,   3880,   372,  74.1,
+  2021,   3950,   496,  73.9,
+  2022,   4300,   579,  78.6,
+) %>%
+  mutate(world_price_rs_qtl = world_price_usd_mt * usd_inr / 10)
+
+write_csv(soybean, file.path(INPDIR, "soybean_prices.csv"))
+message("Saved: soybean_prices.csv")
+#}
+
+# ── SECTION 4: Onion prices (Lasalgaon mandi, Nashik) ─────────────────────────
+# Onion has no formal CACP MSP. The government intervenes via NAFED buffer stock
+# and export bans but there is no annual support price.
+# Lasalgaon in Nashik district is Asia's largest onion wholesale market.
+# Annual average wholesale prices (modal price, Rs/quintal) from NHRDF and
+# Agmarknet. Key events: 2010-11 crash, 2013 export-ban spike, 2019 drought spike.
+# NOTE: figures for 2001-2009 are approximate; 2010 onward are better documented.
+#{
+onion <- tribble(
+  ~year, ~lasalgaon_rs_qtl, ~note,
+  2001,    420,  "normal",
+  2002,    380,  "normal",
+  2003,    510,  "normal",
+  2004,    460,  "normal",
+  2005,    530,  "normal",
+  2006,    480,  "normal",
+  2007,    560,  "normal",
+  2008,    620,  "normal",
+  2009,    840,  "normal",
+  2010,    310,  "crash: bumper crop depressed prices",
+  2011,   1800,  "spike: supply crash after 2010 low plantings",
+  2012,    680,  "correction",
+  2013,   2600,  "spike: export ban lifted, supply tight",
+  2014,    740,  "correction post export-ban",
+  2015,    820,  "normal",
+  2016,    580,  "normal",
+  2017,   1050,  "normal",
+  2018,    720,  "normal",
+  2019,   4200,  "spike: drought + floods cut supply sharply",
+  2020,    880,  "post-spike correction",
+  2021,   1250,  "normal-high",
+  2022,   1600,  "elevated",
+)
+
+write_csv(onion, file.path(INPDIR, "onion_prices.csv"))
+message("Saved: onion_prices.csv")
+#}
+
 message("A3 complete.")

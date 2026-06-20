@@ -46,7 +46,7 @@ Every dot in the image above is ten farmer suicides. The tallest columns are the
 
 1. **This is not a Maharashtra crisis. It is a Vidarbha crisis.** Vidarbha's eleven eastern districts account for roughly half the state's total in most years. Six of them (Yavatmal, Amravati, Akola, Washim, Buldhana, Wardha) drive the bulk of those numbers. Yavatmal alone regularly records more farmer suicides than most Indian states.
 
-2. **Cotton monoculture is the structural driver.** Vidarbha grows cotton almost exclusively. It is a cash crop that requires borrowed capital every season with no food-crop fallback. When monsoons fail or prices drop, the farmer who borrowed has no hedge.
+2. **Commodity dependence is the structural driver.** Vidarbha grows cotton almost exclusively; Marathwada depends on soybean; the Nashik belt grows onions. Each is a cash crop requiring borrowed capital every season with no food-crop fallback. When monsoons fail or prices drop, the farmer who borrowed has no hedge. The crop changes by region; the trap does not.
 
 3. **Loan waivers work, but only for two to three years.** The 2008 UPA waiver and the 2017 Maharashtra waiver both cut suicide counts. Both were followed by recovery to pre-waiver levels. Clearing debt does not change the conditions that create it.
 
@@ -225,17 +225,27 @@ Madhya Pradesh, significant in absolute terms, almost vanishes per-capita. MP ha
 
 ---
 
-## Cotton Prices and Suicides {#cotton}
+## Commodity Prices and Suicides {#cotton}
 
-### When the price collapses, the deaths follow
+### Three crops, three regions, the same structural problem
 
-![Global cotton prices (COTLOOK A index, cents/lb) versus Maharashtra farmer suicides, 2001--2022. Higher prices are associated with fewer suicides; the 2012 price collapse was followed by a rebound in deaths. Source: NCRB ADSI; Cotlook Ltd.](output/figures/fig_cotton_price.png){width=100%}
+Maharashtra is not a one-crop state. Vidarbha runs almost exclusively on cotton. Marathwada's dominant kharif crop is soybean. The Nashik belt grows nearly half of India's onions. Each region is exposed to a different commodity market, and each has seen that market crash in ways that translate directly into farm household distress.
 
-The cotton price signal is inverse and imperfect: when global prices rise, suicides tend to fall; when prices crash, deaths follow. The clearest episode is 2010 to 2012. Global cotton prices nearly tripled during the 2010-11 season as a supply shock from Pakistan flooding tightened world markets. Maharashtra's suicide count fell in both years. Then the boom ended. Prices collapsed by nearly half in 2012. By 2013, suicides had climbed back above 3,700.
+![Commodity price indices for Maharashtra's three major agricultural zones, 2001--2022 (2001 = 100). Onion prices swing far more violently than cotton or soybean; each crash lands on a different set of farmers. Sources: Cotlook Ltd; World Bank Pink Sheet; NHRDF / Agmarknet (Lasalgaon mandi, Nashik).](output/figures/fig_crop_prices.png){width=100%}
 
-This is not a clean relationship. The correlation is real but modest: other factors cut across it. The 2008 loan waiver pulled suicides down even as prices were middling. The 2006 peak happened with prices in the 60 cents range, not a crash year. Cotton prices are one input into a farmer's calculation about whether the debt can be repaid; they are not the only input.
+Onion is by far the most volatile. In 2010, a bumper harvest collapsed Lasalgaon prices to around Rs 310 per quintal. Farmers in Nashik and Ahmednagar were burning onions on roadsides because transport cost more than sale price. In 2013, supply tightened after low plantings, prices spiked to Rs 2,600, and the government slapped an export ban. In 2019, drought and floods cut the crop sharply: prices hit Rs 4,200 at Lasalgaon. Onion farmers do not know from one season to the next whether their crop will fetch Rs 300 or Rs 4,000.
 
-What the price chart does show is the exposure embedded in cotton monoculture. Vidarbha farmers have no diversified crop portfolio, so they absorb the full volatility of a single global commodity price. A farmer growing soybean or dal alongside cotton has some buffer. A Vidarbha farmer with nothing but cotton is fully exposed to whatever Cotlook A prints in October when the harvest comes in.
+Soybean is less violent but not stable. The World Bank benchmark price for US soybeans dropped nearly 40 percent between 2012 and 2016. Indian soybean MSP rose every year, but actual farm-gate prices in Marathwada are tied to the crushing industry's procurement price, which tracks the world market. When the world price fell, MSP provided partial support but did not cover cost of cultivation for many farmers. Marathwada's debt-and-suicide crisis after 2013 runs parallel to the soybean price bust.
+
+### Cotton: the Vidarbha version of the same story
+
+![Global cotton prices (COTLOOK A index, cents/lb) versus Maharashtra farmer suicides, 2001--2022. Source: NCRB ADSI; Cotlook Ltd.](output/figures/fig_cotton_price.png){width=100%}
+
+Cotton has the most documented price-suicide connection in the academic literature, partly because Vidarbha is where the crisis is most concentrated and partly because cotton prices are published by a single global benchmark (COTLOOK A). The 2010-12 cotton boom, driven by Pakistan flooding cutting world supply, coincided with a two-year fall in Maharashtra suicides. When prices collapsed by half in 2012, deaths climbed back above 3,700 by 2013.
+
+The relationship is real but not mechanical. The 2006 peak happened with cotton prices around 60 cents, not a crash year. The 2009 drought year did not produce a suicide spike because the 2008 loan waiver had just cleared outstanding debt. Cotton prices are one factor in whether a borrowed-against harvest can repay its debts. They are not the only one.
+
+The common structure across all three crops is the same: farmers borrow at the start of the season, plant a single commodity, and face whatever price the market offers at harvest. There is no buffer, no hedge, and in most cases no working crop insurance that pays out before creditors come to collect.
 
 ---
 
