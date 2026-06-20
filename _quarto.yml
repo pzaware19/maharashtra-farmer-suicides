@@ -6,17 +6,21 @@ website:
   title: "Maharashtra's Farmer Suicide Crisis"
   navbar:
     left:
-      - text: "The Geography"
+      - text: "Geography"
         href: index.html#geography
-      - text: "The Timeline"
+      - text: "Timeline"
         href: index.html#timeline
-      - text: "The Causes"
+      - text: "Causes"
         href: index.html#causes
+      - text: "Gender"
+        href: index.html#gender
+      - text: "India"
+        href: index.html#india
+      - text: "Rainfall"
+        href: index.html#rainfall
       - text: "Policy Gap"
         href: index.html#policy
     right:
-      - text: "Article"
-        href: index.html#article
       - text: "Data"
         href: index.html#data
   page-footer:
