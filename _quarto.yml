@@ -29,6 +29,8 @@ website:
     right:
       - text: "Data"
         href: index.html#data
+      - text: "Methods"
+        href: index.html#methods
   page-footer:
     center: "Piyush Zaware · Global Poverty Research Laboratory, Northwestern Kellogg / University of Chicago · Data: NCRB ADSI 2001–2022"
 

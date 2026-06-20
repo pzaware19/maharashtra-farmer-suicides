@@ -11,7 +11,7 @@ format:
 # Maharashtra's Farmer Suicide Crisis
 
 ::: {.subtitle}
-Between 2001 and 2022, 66,000 farmers killed themselves in Maharashtra. Eight per day, every day, for two decades. This is what the data shows: where, when, why, and what the evidence says about whether anything has worked.
+Between 2001 and 2022, more than 70,000 farmers killed themselves in Maharashtra. Close to nine every day, for two decades. This is what the data shows: where, when, why, and what the evidence says about whether anything has worked.
 :::
 
 ::: {.meta}
@@ -20,7 +20,7 @@ Piyush Zaware · Northwestern Kellogg / University of Chicago
 
 ::: {.badge-row}
 ::: {.badge-item}
-66,000 Deaths
+70,000+ Deaths
 :::
 ::: {.badge-item}
 22 Years
@@ -38,7 +38,7 @@ Choropleth · Time Series · Cause Analysis
 :::
 
 ::: {.lead-para}
-Every dot in the image above is ten farmer suicides. The tallest columns are the six Vidarbha districts at their 2006 peak, when Maharashtra recorded 4,453 farmer deaths in a single year. This project maps the National Crime Records Bureau's district-level data from 2001 to 2022 and reads the numbers against the policy responses of those two decades.
+Every dot in the image above is ten farmer suicides. The tallest columns are the Vidarbha districts at their 2006 peak, when Maharashtra recorded 4,453 farmer deaths in a single year. This project maps the National Crime Records Bureau's data from 2001 to 2022 and reads the numbers against the policy responses of those two decades. The figures used here are documented series by series in a [data provenance audit](#methods); where numbers are reconstructed rather than taken directly from an official table, the charts say so.
 :::
 
 ::: {.abstract-box}
@@ -57,14 +57,18 @@ Every dot in the image above is ten farmer suicides. The tallest columns are the
 
 ```{=html}
 <div class="stat-row">
-  <div class="stat"><div class="stat-num">66,000</div><div class="stat-label">farmer suicides<br>2001–2022</div></div>
+  <div class="stat"><div class="stat-num">71,814</div><div class="stat-label">farmer suicides<br>2001–2022</div></div>
   <div class="stat"><div class="stat-num">4,453</div><div class="stat-label">peak year<br>(2006)</div></div>
   <div class="stat"><div class="stat-num">~50%</div><div class="stat-label">from Vidarbha<br>(11 districts)</div></div>
   <div class="stat"><div class="stat-num">40%</div><div class="stat-label">due to debt /<br>financial distress</div></div>
 </div>
 ```
 
-The primary source is the NCRB's **Accidental Deaths and Suicides in India** (ADSI) series, published every year. Table A-2 gives state-level farmer suicide counts by gender; Table A-2.2 gives district breakdowns; Table A-2.4 records the stated cause. The data has known limitations: the definition of "farmer" is not consistent across years, families sometimes misclassify suicides to avoid stigma, and what a local official records as the cause varies widely. Researchers who have worked with this data generally think the figures undercount rather than overcount. Everything here treats the published numbers as a floor.
+The primary source is the NCRB's **Accidental Deaths and Suicides in India** (ADSI) series, published every year. Table A-2 gives state-level farmer suicide counts by gender; Table A-2.2 gives district breakdowns; Table A-2.4 records the stated cause. The data has known limitations: families sometimes misclassify suicides to avoid stigma, and what a local official records as the cause varies widely. Researchers who have worked with this data generally think the figures undercount rather than overcount. Everything here treats the published numbers as a floor.
+
+::: {.callout-important}
+**The 2014 definition change.** Before 2014, NCRB reported a single farm-sector category that included both cultivators and agricultural labourers. From 2014 onward it splits the two. The series on this site uses the **cultivators** figure, which means the pre-2014 and post-2014 numbers are not strictly comparable, and part of the apparent decline after 2014 is definitional rather than real. The 2014 break is marked directly on the time-series chart. The full reliability of every data series, including which numbers are official and which are reconstructed, is documented in the [Data and Methods](#methods) section.
+:::
 
 | Source | Years | Geographic level | Variables |
 |--------|-------|-----------------|-----------|
@@ -83,7 +87,7 @@ Maharashtra shapefiles were downloaded via the `geodata` R package (`gadm(countr
 
 The map below shows average annual farmer suicides by district across 2001 to 2022. Districts where NCRB did not publish data appear in grey.
 
-![Average annual farmer suicides per district, Maharashtra, 2001–2022. The Vidarbha belt in the east dominates. Yavatmal is consistently the highest single district in the country. Source: NCRB ADSI.](output/figures/fig_map_district.png){width=100%}
+![Average annual farmer suicides per district, Maharashtra, 2001–2022. The Vidarbha belt in the east dominates. Yavatmal is consistently the highest single district in the country. Source: NCRB ADSI district tables (partial). **Illustrative:** district figures are reconstructed from a partial set of published NCRB district tables, not a complete annual series. See [Data and Methods](#methods).](output/figures/fig_map_district.png){width=100%}
 
 Look at that map for a moment. Vidarbha's eleven eastern districts run dark red, accounting for roughly half the state's total every year. Six of them form the core of the crisis: Yavatmal, Amravati, Akola, Washim, Buldhana, Wardha. Yavatmal has averaged over 500 farmer suicides annually for two decades.
 
@@ -111,11 +115,15 @@ The numbers peaked in **2006 at 4,453**. That year, P. Sainath's reporting in *T
 
 It worked, for a while. Suicides fell through 2009, came down to around 2,800, then climbed again through the early 2010s. By 2012 the number was back above 3,700.
 
-A second waiver came in 2017, this one from the state government under Chief Minister Devendra Fadnavis: Rs 34,000 crore. Suicides dropped again. In 2018 the count hit its lowest point since 2001, at 2,239. Then they went up again.
+A second waiver came in 2017, this one from the state government under Chief Minister Devendra Fadnavis: Rs 34,000 crore. Suicides dropped again. In 2018 the count fell to 2,239, its lowest in the series. But this number needs a caveat, marked by the blue line on the chart above.
+
+::: {.callout-important}
+**Read the 2014 line carefully.** In 2014 NCRB stopped counting agricultural labourers in the "farmer" total and reported only cultivators. The figures to the right of the blue line are therefore lower partly because they count fewer kinds of people, not only because fewer people died. The 2018 low of 2,239 is a cultivators-only figure; it is not directly comparable to the 4,453 of 2006, which included labourers. The fall after 2017 is real, but its size is overstated by the definitional change.
+:::
 
 ### Vidarbha's share of the total
 
-![Farmer suicides by region: Vidarbha (deepest red), Marathwada (orange), and the rest of Maharashtra. Vidarbha accounts for roughly half the state total in most years. Source: NCRB ADSI; regional shares estimated from published district data.](output/figures/fig_vidarbha_vs_rest.png){width=100%}
+![Farmer suicides by region: Vidarbha (deepest red), Marathwada (orange), and the rest of Maharashtra. Vidarbha accounts for roughly half the state total in most years. Source: NCRB ADSI. **Illustrative:** regional shares are estimated from partial district data (Marathwada fixed at ~18%), not measured directly. See [Data and Methods](#methods).](output/figures/fig_vidarbha_vs_rest.png){width=100%}
 
 Vidarbha runs at roughly half the state total every year. Marathwada contributes another 18 percent. The remaining 17 districts of Maharashtra, including the more prosperous western belt, account for less than a third of the total while holding more than a third of the state's agricultural population.
 
@@ -158,7 +166,7 @@ That matters for what you do about it. Farmer suicides in Vidarbha are not prima
 
 Cotton MSP has risen fourfold since 2001, from Rs 1,500 to Rs 6,080 per quintal. That looks like substantial support. The cost of cultivation data shows why it has not been enough.
 
-![Cotton government MSP vs A2 cost of cultivation per quintal, 2001--2022. The shaded gap is what Vidarbha farmers lose even when selling at full MSP. The dashed line is the Swaminathan Commission's C2 benchmark (1.65x A2). Source: CACP Cost of Cultivation Survey (Maharashtra); GoI MSP press releases.](output/figures/fig_msp_vs_cost.png){width=100%}
+![Cotton government MSP vs A2 cost of cultivation per quintal, 2001--2022. The shaded gap is what Vidarbha farmers lose even when selling at full MSP. The dashed line is the Swaminathan Commission's C2 benchmark (1.65x A2). Source: CACP Cost of Cultivation Survey (Maharashtra); GoI MSP press releases. **Note:** MSP figures are official and verified; A2 cost figures are reconstructed from CACP benchmark years and interpolated. See [Data and Methods](#methods).](output/figures/fig_msp_vs_cost.png){width=100%}
 
 The A2 cost of growing cotton, covering seed, fertiliser, pesticide, hired labour, and machine hire, has risen from roughly Rs 2,300 per quintal in 2001 to around Rs 8,200 in 2022. At typical Vidarbha dryland yields of six to seven quintals per hectare, a farmer selling at full MSP in 2022 still recovers only about 74 percent of paid-out costs. In 2001, the ratio was similarly unfavourable. MSP has risen; so has everything it takes to grow the crop.
 
@@ -166,7 +174,7 @@ The Swaminathan Commission recommended MSP at 1.5 times C2 cost, which adds impu
 
 ### Input costs have outpaced support prices
 
-![Price index for key inputs (DAP fertiliser, diesel) vs crop MSP (cotton, soybean), 2001 = 100. Diesel has risen 3.5-fold; DAP nearly threefold (with a sharp 2008 spike). Cotton MSP has kept rough pace with diesel but has not covered the full A2 cost. Sources: PPAC; FICCI/DAC; CACP.](output/figures/fig_input_index.png){width=100%}
+![Price index for key inputs (DAP fertiliser, diesel) vs crop MSP (cotton, soybean), 2001 = 100. Diesel has risen 3.5-fold; DAP nearly threefold (with a sharp 2008 spike). Cotton MSP has kept rough pace with diesel but has not covered the full A2 cost. Sources: PPAC; FICCI/DAC; CACP. **Note:** MSP and diesel series are verifiable; DAP annual values are approximate. See [Data and Methods](#methods).](output/figures/fig_input_index.png){width=100%}
 
 Diesel and DAP together account for 40 to 50 percent of the A2 cost of cotton cultivation. Both have risen faster than general inflation. When a farmer's two largest input costs rise faster than the price support on the output side, the margin between what a crop costs and what it fetches keeps narrowing, even when MSP is rising in absolute rupee terms.
 
@@ -228,7 +236,7 @@ The Maharashtra government holds district-year data on farmer suicides, PMFBY en
 
 None of these questions has been answered in a published study or a government evaluation report. The data is sitting in government databases. The method is not exotic. **The evidence simply does not exist.**
 
-Sixty-six thousand deaths over twenty-two years is enough data. It should not take more.
+More than seventy thousand deaths over twenty-two years is enough data. It should not take more.
 :::
 
 ### What a proper evaluation would need
@@ -281,7 +289,7 @@ Madhya Pradesh, significant in absolute terms, almost vanishes per-capita. MP ha
 
 Maharashtra is not a one-crop state. Vidarbha runs almost exclusively on cotton. Marathwada's dominant kharif crop is soybean. The Nashik belt grows nearly half of India's onions. Each region is exposed to a different commodity market, and each has seen that market crash in ways that translate directly into farm household distress.
 
-![Commodity price indices for Maharashtra's three major agricultural zones, 2001--2022 (2001 = 100). Onion prices swing far more violently than cotton or soybean; each crash lands on a different set of farmers. Sources: Cotlook Ltd; World Bank Pink Sheet; NHRDF / Agmarknet (Lasalgaon mandi, Nashik).](output/figures/fig_crop_prices.png){width=100%}
+![Commodity price indices for Maharashtra's three major agricultural zones, 2001--2022 (2001 = 100). Onion prices swing far more violently than cotton or soybean; each crash lands on a different set of farmers. Sources: Cotlook Ltd; World Bank Pink Sheet; NHRDF / Agmarknet (Lasalgaon mandi, Nashik). **Note:** onion annual averages are reconstructed (major events are accurate; exact yearly values approximate); cotton and soybean world prices are approximate annual figures. See [Data and Methods](#methods).](output/figures/fig_crop_prices.png){width=100%}
 
 Onion is by far the most volatile. In 2010, a bumper harvest collapsed Lasalgaon prices to around Rs 310 per quintal. Farmers in Nashik and Ahmednagar were burning onions on roadsides because transport cost more than sale price. In 2013, supply tightened after low plantings, prices spiked to Rs 2,600, and the government slapped an export ban. In 2019, drought and floods cut the crop sharply: prices hit Rs 4,200 at Lasalgaon. Onion farmers do not know from one season to the next whether their crop will fetch Rs 300 or Rs 4,000.
 
@@ -315,9 +323,56 @@ What the rainfall scatter shows is that monsoon variability is a trigger, not th
 
 ---
 
-::: {.callout-note}
-**Data note.** The figures on this page use data compiled from published NCRB ADSI annual reports (2001–2022). State-level totals come directly from NCRB Table A-2. District-level figures come from published ADSI district tables, cross-checked against Mishra (2006), Patel et al. (2012, *Lancet*), and Merriott (2016). Cause data are from Table A-2.4 for 2015, 2019, and 2022. The compiled dataset and R code are available on request.
-:::
+## Data and Methods {#methods}
+
+### What is official, what is reconstructed
+
+This site mixes data of different reliability, and it is important to be transparent about which is which. Every series falls into one of three tiers:
+
+- **Tier A (official, verified):** traces directly to a named official source, with key values cross-checked and matching.
+- **Tier B (official series, approximate values):** a real published series exists and the pattern is accurate, but the exact annual values here are reconstructed from secondary citations or interpolated.
+- **Tier C (reconstructed / illustrative):** anchored to real benchmarks and real events but substantially interpolated or modeled. These should be read as illustrative of magnitude and direction, not cited as primary data.
+
+| Series | Tier | Source | Status |
+|--------|:----:|--------|--------|
+| Maharashtra farmer suicides (state total) | **A** | NCRB ADSI Table A-2 | 2012 value (3,786) matches NCRB exactly. Cultivators category. |
+| Gender split (male/female) | B | NCRB ADSI Table A-2 | ~90% male consistent with literature; exact split approximate |
+| India state comparison (KA, AP+TG, MP) | A/B | NCRB ADSI Table A-2 | Maharashtra verified; other states not independently audited year by year |
+| Cotton MSP | **A** | GoI / CACP (PIB releases) | 2018, 2020, 2022 verified exact |
+| Cotton world price (COTLOOK A) | B | Cotlook Ltd | Boom/bust pattern accurate; annual averages approximate |
+| Soybean MSP | **A** | CACP | Official, verifiable |
+| Soybean world price | B | World Bank Pink Sheet | Real benchmark; values approximate |
+| Onion price (Lasalgaon) | **C** | NHRDF / Agmarknet | Major events real; annual averages reconstructed |
+| Cotton / soybean A2 cost | **C** | CACP Cost of Cultivation | Reconstructed from benchmark years, interpolated |
+| DAP fertiliser price | **C** | Dept. of Agriculture / FICCI | 2008 spike real; intermediate years approximate |
+| Diesel price | B | PPAC / IOCL | Verifiable; approximate to nearest rupee |
+| District-level suicides | **C** | NCRB district tables (partial) | Representative, not complete; only Yavatmal has a full annual series |
+| Cause breakdown | B | NCRB ADSI Table A-2.4 | Categories real; exact percentages approximate |
+| Cultivator population | B | Census 2001, 2011 | Census anchors real; interpolation modeled |
+| Vidarbha rainfall | B | IMD Vidarbha sub-division | LPA (926 mm) real; annual values approximate |
+| Regional shares | **C** | Estimated from district data | Marathwada fixed at ~18%; estimated, not measured |
+
+The **regression** (84% R²) and the **headline count** rest on the Tier A Maharashtra series, which is verified. The **cost-of-cultivation** and **district** charts rest on Tier C reconstructions and should be read as illustrative of the gap and the geography, not as precise figures.
+
+### The 2014 break, again
+
+The most important single caveat: NCRB changed its "farmer" definition in 2014, splitting cultivators from agricultural labourers. The series here uses cultivators. Pre-2014 and post-2014 numbers are not strictly comparable, and part of the post-2014 decline is definitional. This is marked on the time-series chart and discussed in the timeline.
+
+### The headline number
+
+The verified Maharashtra cultivator series sums to **71,814** for 2001–2022, which is why the headline reads "more than 70,000." Because of the 2014 break, that sum mixes a broader pre-2014 definition with a narrower one after, so it is best read as "more than 70,000 recorded farm-sector suicides on a definition that narrowed in 2014."
+
+A full series-by-series provenance audit, including what would be required to move each Tier B and C series to Tier A, is in `output/reports/DATA_PROVENANCE.md` in the project repository. The compiled datasets and all R code are in the same repository.
+
+### Key references
+
+- Mishra, S. (2006). *Suicide of Farmers in Maharashtra*. Indira Gandhi Institute of Development Research, Mumbai.
+- Nagaraj, K. (2008). *Farmers' Suicides in India: Magnitudes, Trends and Spatial Patterns*. Madras Institute of Development Studies.
+- Patel, V., et al. (2012). "Suicide mortality in India: a nationally representative survey." *The Lancet*, 379(9834), 2343–2351.
+- Merriott, D. (2016). "Factors associated with the farmer suicide crisis in India." *Journal of Epidemiology and Global Health*, 6(4), 217–227.
+- Sainath, P. (2004–2010). Reporting on Vidarbha agrarian distress, *The Hindu* and the People's Archive of Rural India (PARI).
+- National Commission on Farmers (Swaminathan Commission) (2006). Final Report. Government of India.
+- NCRB. *Accidental Deaths and Suicides in India* (ADSI), annual reports 2001–2022.
 
 ---
 

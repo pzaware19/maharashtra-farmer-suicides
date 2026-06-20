@@ -77,9 +77,23 @@ message("Saved: fig_map_district.png")
 # ── FIGURE 2: Time series with event annotations ──────────────────────────────
 #{
 ts_plot <- ggplot(mh_state, aes(x = year, y = total_suicides)) +
+  # Shade the post-2014 period to flag the NCRB definitional break
+  annotate("rect", xmin = 2013.5, xmax = 2022.5, ymin = 0, ymax = 5200,
+           fill = "#3182BD", alpha = 0.06) +
   geom_area(fill = "#FDD0A2", alpha = 0.6) +
   geom_line(colour = "#E6550D", linewidth = 1.4) +
   geom_point(colour = "#A63603", size = 2.5) +
+  # 2014 definitional break marker
+  geom_vline(xintercept = 2013.5, linetype = "solid", colour = "#3182BD", linewidth = 0.7) +
+  annotate("text", x = 2013.4, y = 1000, hjust = 1, vjust = 0,
+           label = "2014: NCRB splits\ncultivators from\nfarm labourers\n(series not strictly\ncomparable across line)",
+           size = 2.5, colour = "#2171B5", lineheight = 0.92, fontface = "italic") +
+  annotate("text", x = 2007, y = 300, hjust = 0.5,
+           label = "Pre-2014: farmers + agricultural labourers",
+           size = 2.6, colour = "#8B5A00", fontface = "italic") +
+  annotate("text", x = 2018, y = 300, hjust = 0.5,
+           label = "Post-2014: cultivators only",
+           size = 2.6, colour = "#2171B5", fontface = "italic") +
   # Event lines
   geom_vline(data = events, aes(xintercept = year),
              linetype = "dashed", colour = "#666666", linewidth = 0.5) +
@@ -89,10 +103,10 @@ ts_plot <- ggplot(mh_state, aes(x = year, y = total_suicides)) +
   scale_y_continuous(labels = comma, limits = c(0, 5200)) +
   labs(
     title    = "Farmer Suicides in Maharashtra, 2001-2022",
-    subtitle = "Maharashtra consistently accounts for 20-35% of all farmer suicides in India",
+    subtitle = "Maharashtra consistently accounts for 20-35% of all farmer suicides in India.\nNote: NCRB narrowed the 'farmer' definition in 2014, so part of the post-2014 decline is definitional, not real.",
     x        = NULL,
-    y        = "Total farmer suicides",
-    caption  = "Source: NCRB Accidental Deaths and Suicides in India"
+    y        = "Farmer suicides (cultivators)",
+    caption  = "Source: NCRB Accidental Deaths and Suicides in India. Pre-2014 counts include agricultural labourers; from 2014 NCRB reports cultivators separately."
   ) +
   theme_print
 

@@ -3,9 +3,11 @@
 **By Piyush Zaware**
 *Researcher, Global Poverty Research Laboratory, Northwestern Kellogg School of Management*
 
-Between 2001 and 2022, 66,000 farmers killed themselves in Maharashtra. That works out to roughly eight farmers per day, every day, for two decades. India as a whole accounts for roughly a third of all farmer suicides recorded globally. Maharashtra, for most of those years, accounts for a third of India's.
+Between 2001 and 2022, more than 70,000 farmers killed themselves in Maharashtra. That works out to close to nine farmers per day, every day, for two decades. India as a whole accounts for roughly a third of all farmer suicides recorded globally. Maharashtra, for most of those years, accounts for a third of India's.
 
 These numbers come from the NCRB, the National Crime Records Bureau, which publishes cause-of-death data annually in its Accidental Deaths and Suicides in India series. The data has gaps and definitional problems, and some researchers think it undercounts. Nobody thinks it overcounts. What the numbers show, even conservatively, is a sustained catastrophe in one of India's richest states.
+
+One definitional point matters for reading every number that follows. Before 2014, NCRB reported a single farm-sector category that combined cultivators and agricultural labourers. From 2014 it split the two. The figures here use the cultivators series, which means the pre-2014 and post-2014 counts are not strictly comparable, and part of the apparent decline after 2014 reflects the narrower definition rather than fewer deaths. The verified Maharashtra cultivator series sums to 71,814 over 2001-2022, which is the basis for the "more than 70,000" figure.
 
 The question worth asking in 2026 is not whether the crisis exists. It does. The question is where it is, why it is there, whether anything tried over the past two decades has worked, and what a serious policy response would require.
 
@@ -41,7 +43,7 @@ Maharashtra's farmer suicide numbers peaked in 2006 at 4,453. That year, P. Sain
 
 It worked, for a while. Suicides fell through 2009, reached a low of around 2,800, then climbed again through the early 2010s. By 2012, the count was back above 3,700.
 
-A second waiver came in 2017, this one state-level, under Chief Minister Devendra Fadnavis, worth Rs 34,000 crore. Suicides fell again. In 2018, the total dropped to 2,239, the lowest in the data. Then they climbed. By 2021, the count was back above 2,700.
+A second waiver came in 2017, this one state-level, under Chief Minister Devendra Fadnavis, worth Rs 34,000 crore. Suicides fell again. In 2018, the cultivator total dropped to 2,239, the lowest in the series. That low needs the 2014 caveat attached: it counts cultivators only, so it is not directly comparable to the 4,453 of 2006, which included agricultural labourers. The fall after 2017 is real, but the definitional change exaggerates its size. Then the numbers climbed. By 2021, the count was back above 2,700.
 
 The pattern is consistent across both interventions: a loan waiver reduces suicides for two to three years, then the numbers recover. A state-level regression on the NCRB data confirms this: controlling for cotton prices and monsoon, the 2008 waiver window is associated with roughly 18 percent fewer suicides in the three years that followed, and the 2017 waiver with roughly 15 percent fewer. Both effects are in the expected direction. The 2017 estimate is statistically significant.
 
@@ -127,7 +129,7 @@ A difference-in-differences study comparing districts where PMFBY coverage jumpe
 
 These questions have not been answered in a published study or a government evaluation report. The data sits in separate systems across NCRB, the PMFBY portal, CCI, and IMD. Nobody has pulled it together and run the analysis. There is also limited political appetite to fund an evaluation whose answer might be "the scheme is not reducing suicides by much."
 
-Sixty-six thousand deaths over twenty-two years is enough data. It should not require more.
+More than seventy thousand deaths over twenty-two years is enough data. It should not require more.
 
 ---
 
@@ -145,4 +147,4 @@ That is the gap. Not in compassion or policy effort. In evidence.
 
 *Piyush Zaware is a researcher at the Global Poverty Research Laboratory, Northwestern Kellogg School of Management, and a doctoral student in economics at the University of Chicago. He works on agricultural economics, public finance, and state capacity in India.*
 
-*Data: NCRB Accidental Deaths and Suicides in India (2001-2022); CACP Cost of Cultivation Survey; Cotlook Ltd; World Bank Pink Sheet; IMD; PPAC; FICCI.*
+*Data: NCRB Accidental Deaths and Suicides in India (2001-2022); CACP Cost of Cultivation Survey; Cotlook Ltd; World Bank Pink Sheet; IMD; PPAC; FICCI. The Maharashtra state suicide series and crop MSPs are taken directly from official sources and verified. District-level figures, cost-of-cultivation estimates, and onion prices are reconstructed from published benchmarks and should be read as illustrative; a full series-by-series provenance audit accompanies the dataset.*

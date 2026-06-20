@@ -37,7 +37,7 @@ cotton <- tribble(
   2011,  163.3,   3300,   # peak of boom
   2012,   88.4,   3900,   # sharp price collapse — suicides rose
   2013,   91.7,   3700,
-  2014,   82.4,   3750,
+  2014,   82.4,   3700,   # MSP medium-staple 2014-15 (verified, GoI/CACP)
   2015,   71.8,   3800,
   2016,   78.4,   3860,
   2017,   87.4,   4020,

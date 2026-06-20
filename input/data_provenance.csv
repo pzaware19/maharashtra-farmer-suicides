@@ -1,0 +1,18 @@
+series,file,tier,official_source,verification_status
+Maharashtra farmer suicides state total 2001-2022,ncrb_mh_state.csv,A,NCRB ADSI Table A-2,2012 value matches NCRB exactly; cultivators category; 2014 break applies
+Gender split male/female,ncrb_mh_state.csv,B,NCRB ADSI Table A-2,~90% male consistent with literature; exact annual split approximate
+India state comparison KA AP+TG MP,ncrb_india_states.csv,A/B,NCRB ADSI Table A-2,Maharashtra verified; other states from same series not independently audited
+Cotton MSP medium staple,cotton_prices.csv,A,GoI CACP PIB releases,Verified 2018/2020/2022 exact; 2014 corrected to 3700
+Cotton world price COTLOOK A,cotton_prices.csv,B,Cotlook Ltd,Boom/bust pattern accurate; exact annual averages approximate
+Soybean MSP,soybean_prices.csv,A,CACP,Official series verifiable
+Soybean world price,soybean_prices.csv,B,World Bank Pink Sheet,Real benchmark; annual values and INR conversion approximate
+Onion price Lasalgaon mandi,onion_prices.csv,C,NHRDF Agmarknet,Major events real; exact annual averages reconstructed; pre-2010 approximate
+Cotton A2 cost of cultivation,input_costs.csv,C,CACP Cost of Cultivation Survey Maharashtra,Reconstructed from benchmark years interpolated; yield assumption 6-7 qtl/ha
+Soybean A2 cost of cultivation,input_costs.csv,C,CACP Cost of Cultivation Survey,Reconstructed and interpolated
+DAP fertiliser price,input_costs.csv,C,Dept of Agriculture FICCI,2008 spike real; intermediate years approximate
+Diesel retail price Delhi,input_costs.csv,B,PPAC IOCL,Verifiable series; values approximate to nearest rupee
+District-level suicides,ncrb_district.csv,C,NCRB ADSI district tables partial,Representative not complete; only Yavatmal full series; others benchmark years only
+Cause breakdown,ncrb_causes.csv,B,NCRB ADSI Table A-2.4,Categories and magnitudes from NCRB; exact percentages approximate
+Cultivator population by state,agri_population.csv,B,Census of India 2001 2011 Table B-4,Census anchors real; interpolation and extrapolation modeled
+Vidarbha monsoon rainfall,imd_vidarbha_rainfall.csv,B,IMD Vidarbha sub-division,LPA 926mm real; annual values approximate; drought years directionally correct
+Regional shares Vidarbha Marathwada Rest,derived in B1_clean.R,C,Estimated from district data,Marathwada fixed at ~18%; Vidarbha summed from partial data; estimated not measured
